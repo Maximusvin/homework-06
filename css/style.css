@@ -1,0 +1,387 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+  box-sizing: inherit;
+  padding: 0;
+  margin: 0;
+}
+
+a,
+a:visited,
+a:hover,
+a:focus {
+  text-decoration: none;
+  color: inherit;
+}
+
+img {
+  border-style: none;
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+button,
+input,
+optgroup,
+select,
+textarea {
+  font-family: inherit;
+  border: none;
+  display: inline-block;
+}
+
+button:hover,
+button:focus,
+input:hover,
+input:focus {
+  outline: none;
+}
+
+ul,
+li {
+  list-style: none;
+}
+
+.visually-hidden:not(:focus):not(:active),
+input[type='checkbox'].visually-hidden,
+input[type='radio'].visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1;
+  bottom: 0px;
+  padding: 0px;
+  word-spacing: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
+.container {
+  width: 1200px;
+  margin: 0 auto;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 400;
+  font-size: 15px;
+  color: #999999;
+}
+
+.header {
+  padding-top: 28px;
+  padding-bottom: 28px;
+  color: #95e1d3;
+}
+
+.navigation {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.logo {
+  font-size: 30px;
+  font-weight: 700;
+}
+
+.menu {
+  font-size: 14px;
+  display: flex;
+}
+
+.menu__item {
+  padding: 10px 0;
+}
+
+.menu__item:not(:last-of-type) {
+  margin-right: 56px;
+}
+
+.menu__link {
+  transition: all 0.2s linear;
+  text-transform: uppercase;
+  padding: 10px 0;
+}
+
+.menu__link:hover,
+.menu__link:focus {
+  color: #f38181;
+  border-bottom: 3px solid #f38181;
+}
+
+.service {
+  padding-top: 100px;
+  padding-bottom: 90px;
+}
+
+.heading__title {
+  text-align: center;
+  color: #333333;
+  font-size: 30px;
+  font-weight: 700;
+  text-transform: uppercase;
+}
+
+.heading__suptitle {
+  font-family: 'Kaushan Script', cursive;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 20px;
+  display: block;
+  text-transform: none;
+}
+
+.heading__title:after {
+  content: '';
+  display: block;
+  width: 60px;
+  height: 3px;
+  background-color: #f38181;
+  margin: 0 auto;
+  margin-top: 40px;
+}
+
+.service-title {
+  margin-bottom: 60px;
+}
+
+.service-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.service-list__item {
+  width: 355px;
+  padding-left: 60px;
+  position: relative;
+}
+
+.service-list__title {
+  font-size: 14px;
+  text-transform: uppercase;
+  color: #333333;
+  font-weight: 400;
+  margin-bottom: 20px;
+}
+
+.service-list__item::before {
+  position: absolute;
+  display: block;
+  content: '';
+  width: 32px;
+  height: 32px;
+  top: 0;
+  left: 0;
+}
+
+.service-list__item_alarm::before {
+  background-image: url(../images/icon/alarm.png);
+}
+
+.service-list__item_l-graph::before {
+  background-image: url(../images/icon/l-graph.png);
+}
+
+.service-list__item_computer::before {
+  background-image: url(../images/icon/computer.png);
+}
+
+.service-list__item_book::before {
+  background-image: url(../images/icon/book.png);
+}
+
+.service-list__item_home::before {
+  background-image: url(../images/icon/home.png);
+}
+.service-list__item_image::before {
+  background-image: url(../images/icon/image.png);
+}
+
+.service-list__text {
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6em;
+}
+
+.service-list__item:not(:nth-last-of-type(-n + 3)) {
+  margin-bottom: 100px;
+}
+
+.team {
+  padding-bottom: 85px;
+}
+
+.team-title {
+  margin-bottom: 45px;
+}
+
+.team__description {
+  width: 955px;
+  margin: 0 auto;
+  text-align: center;
+  font-family: 'Roboto', sans-serif;
+  line-height: 1.6em;
+  margin-bottom: 90px;
+}
+.team-card__list {
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+}
+
+.team-card__item {
+}
+
+.team-card__overlay-box {
+  margin-bottom: 30px;
+  position: relative;
+  transition: all 0.2s linear;
+}
+
+.team-card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(rgba(252, 227, 136, 0.9), rgba(243, 129, 129, 0.9));
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  visibility: hidden;
+  transition: all 0.2s linear;
+}
+
+.team-card__item:hover .team-card__overlay-box,
+.team-card__item:focus .team-card__overlay-box {
+  transform: translate(-10px, -10px);
+  box-shadow: 10px 10px 0 #95e1d3;
+}
+
+.team-card__item:hover .team-card__overlay,
+.team-card__item:focus .team-card__overlay {
+  opacity: 1;
+  visibility: visible;
+}
+
+.social-list {
+  display: flex;
+}
+
+.social-item span {
+  visibility: hidden;
+}
+
+.social-item:not(:last-of-type) {
+  margin-right: 1px;
+}
+
+.social-link {
+  display: block;
+  width: 55px;
+  height: 55px;
+  background-color: #fce38a;
+  background-repeat: no-repeat;
+  background-position: center;
+  transition: all 0.2s linear;
+}
+
+.social-item-facebook {
+  background-image: url(../images/icon/facebook.png);
+}
+
+.social-item-twitter {
+  background-image: url(../images/icon/twitter.png);
+}
+
+.social-item-pinterest {
+  background-image: url(../images/icon/pinterest.png);
+}
+.social-item-instagram {
+  background-image: url(../images/icon/instagram.png);
+}
+
+.social-link:hover,
+.social-link:focus {
+  background-color: #95e1d3;
+}
+
+.team-card__name {
+  font-size: 14px;
+  color: #333333;
+  text-transform: uppercase;
+  font-weight: 400;
+  margin-bottom: 15px;
+}
+
+.team-card__prof {
+  font-family: 'Roboto', sans-serif;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.footer {
+}
+
+.footer-wrap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  border-top: 1px solid #e5e5e5;
+  padding: 11px 0;
+}
+
+.copy {
+  font-size: 14px;
+  color: #333333;
+}
+
+.copy a {
+  color: #f38181;
+  transition: all 0.2s linear;
+}
+
+.copy a:hover,
+.copy a:focus {
+  text-shadow: 0 0 5px rgb(230, 108, 108);
+}
+
+.form {
+  display: flex;
+}
+
+.form__input {
+  display: block;
+  width: 230px;
+  height: 40px;
+  border: 1px solid #e7e7e7;
+  padding-left: 15px;
+  transition: all 0.2s linear;
+}
+
+.form__input::placeholder {
+  font-size: 15px;
+  font-family: 'Roboto', sans-serif;
+  color: #cccccc;
+  font-weight: 300;
+  font-style: italic;
+}
+
+.form__btn {
+  display: block;
+  width: 150px;
+  height: 40px;
+  background-color: #95e1d3;
+  font-weight: 700;
+  text-transform: uppercase;
+  color: #fff;
+  cursor: pointer;
+}
