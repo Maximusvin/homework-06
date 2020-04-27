@@ -144,8 +144,7 @@ body {
   width: 60px;
   height: 3px;
   background-color: #f38181;
-  margin: 0 auto;
-  margin-top: 40px;
+  margin: 40px auto 0;
 }
 
 .service-title {
@@ -223,7 +222,7 @@ body {
 }
 
 .team__description {
-  width: 955px;
+  max-width: 955px;
   margin: 0 auto;
   text-align: center;
   font-family: 'Roboto', sans-serif;
@@ -237,6 +236,7 @@ body {
 }
 
 .team-card__item {
+  width: 380px;
 }
 
 .team-card__overlay-box {
